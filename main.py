@@ -61,9 +61,8 @@ class Ctftime(QMainWindow):
         place_k = 1 / team_place
         points_k = team_points / best_points
         result = (points_k + place_k) * weight / 1 / 1 + (team_place / total_teams)
-
-        self.ui.rating_spinbox.setValue(result)
         best_rating = (1 + 1) * weight / 1 / 1 + (1 / total_teams)
+        self.ui.rating_spinbox.setValue(result)
         return best_rating
 
     def rating_spinbox_to_progressbar(self):
