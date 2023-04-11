@@ -19,7 +19,7 @@ def results_from_ctftime() -> dict:
     return b
 
 
-def event_information(event_id: int) -> list:
+def event_information(event_id: int) -> dict:
     with requests.Session() as s:
         header = {
             'Host': 'ctftime.org',

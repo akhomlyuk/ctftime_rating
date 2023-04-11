@@ -17,6 +17,9 @@
    <iconset resource="resources.qrc">
     <normaloff>:/icons/res/bucket.png</normaloff>:/icons/res/bucket.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <property name="iconSize">
    <size>
     <width>32</width>
@@ -28,7 +31,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QGroupBox" name="groupBox">
+       <widget class="QGroupBox" name="settings_box">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -38,8 +41,11 @@
         <property name="font">
          <font>
           <family>Ubuntu Medium</family>
-          <pointsize>14</pointsize>
+          <pointsize>12</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
         </property>
         <property name="title">
          <string>Parametres</string>
@@ -219,7 +225,7 @@
               <number>3</number>
              </property>
              <property name="maximum">
-              <double>999.990000000000009</double>
+              <double>1000.000000000000000</double>
              </property>
              <property name="value">
               <double>22.690000000000001</double>
@@ -301,7 +307,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QGroupBox" name="groupBox_2">
+       <widget class="QGroupBox" name="eventid_box">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -311,7 +317,7 @@
         <property name="font">
          <font>
           <family>Ubuntu Medium</family>
-          <pointsize>14</pointsize>
+          <pointsize>12</pointsize>
          </font>
         </property>
         <property name="title">

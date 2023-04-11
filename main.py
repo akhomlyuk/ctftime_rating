@@ -1,8 +1,10 @@
+import json
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QWidget
+
+from PySide6.QtWidgets import QApplication, QMainWindow
+
 from design import Ui_MainWindow
 from functions import results_from_ctftime, event_information
-import json
 
 
 class Ctftime(QMainWindow):
