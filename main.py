@@ -20,13 +20,8 @@ class Ctftime(QMainWindow):
         self.ui.rating_progress.setMaximum(self.rating_formula())
         self.ui.rating_progress.setValue(self.ui.rating_spinbox.value())
         self.ui.best_team_points.valueChanged.connect(self.rating_formula)
-
-        # self.ui.event_id.valueChanged.connect(self.results_to_textedit)
         self.ui.event_id.editingFinished.connect(self.event_info_to_text_edit)
         self.ui.event_id.editingFinished.connect(self.results_to_textedit)
-        # self.ui.go_btn.clicked.connect(self.results_to_textedit)
-        # self.ui.go_btn.clicked.connect(self.event_info_to_text_edit)
-
         self.ui.team_points.valueChanged.connect(self.rating_formula)
         self.ui.best_team_points.valueChanged.connect(self.rating_formula)
         self.ui.team_place.valueChanged.connect(self.rating_formula)
@@ -36,9 +31,16 @@ class Ctftime(QMainWindow):
         # self.ui.textEdit.setText(results_from_ctftime()[str(self.ui.event_id.value())]['scores'][0]['points'])
 
     def event_info_to_text_edit(self):
+        self.ui.event_info_text.clear()
         try:
             event_info = event_information(self.ui.event_id.value())
-            self.ui.event_info_text.setText(json.dumps(event_info, indent=4))
+            # event_info = json.dumps(event_info, indent=4)
+            # self.ui.event_info_text.setText(event_info)
+            self.ui.event_info_text.append(f'{event_info["title"]}')
+            self.ui.event_info_text.append(f'Site: <a href="{event_info["url"]}">{event_info["url"]}</a>')
+            self.ui.event_info_text.append(f'Weight: {event_info["weight"]}' + '\n')
+            self.ui.event_info_text.append(event_info['description'] + '\n')
+            self.ui.event_info_text.append(f'Ctftime: <a href="{event_info["ctftime_url"]}">{event_info["ctftime_url"]}</a>' + '\n')
             self.ui.statusBar.clearMessage()
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.event_info_text.clear()
@@ -47,7 +49,8 @@ class Ctftime(QMainWindow):
     def results_to_textedit(self):
         try:
             result = results_from_ctftime()[str(self.ui.event_id.value())]
-            self.ui.text_result.setText(json.dumps(result, indent=4))
+            result = json.dumps(result, indent=4)
+            self.ui.text_result.setText(result)
             self.ui.statusBar.clearMessage()
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.text_result.clear()
