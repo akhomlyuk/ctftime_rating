@@ -16,8 +16,7 @@ class Ctftime(QMainWindow):
         self.event_info_to_text_edit()
         self.rating_formula()
         self.rating_spinbox_to_progressbar()
-
-        self.ui.rating_progress.setMaximum(self.rating_formula())
+        # self.ui.rating_progress.setMaximum(self.rating_formula())
         self.ui.rating_progress.setValue(self.ui.rating_spinbox.value())
         self.ui.best_team_points.valueChanged.connect(self.rating_formula)
         self.ui.event_id.editingFinished.connect(self.event_info_to_text_edit)
@@ -27,8 +26,6 @@ class Ctftime(QMainWindow):
         self.ui.team_place.valueChanged.connect(self.rating_formula)
         self.ui.teams.valueChanged.connect(self.rating_formula)
         self.ui.weight.valueChanged.connect(self.rating_formula)
-
-        # self.ui.textEdit.setText(results_from_ctftime()[str(self.ui.event_id.value())]['scores'][0]['points'])
 
     def event_info_to_text_edit(self):
         self.ui.event_info_text.clear()
@@ -40,7 +37,8 @@ class Ctftime(QMainWindow):
             self.ui.event_info_text.append(f'Site: <a href="{event_info["url"]}">{event_info["url"]}</a>')
             self.ui.event_info_text.append(f'Weight: {event_info["weight"]}' + '\n')
             self.ui.event_info_text.append(event_info['description'] + '\n')
-            self.ui.event_info_text.append(f'Ctftime: <a href="{event_info["ctftime_url"]}">{event_info["ctftime_url"]}</a>' + '\n')
+            self.ui.event_info_text.append(
+                f'Ctftime: <a href="{event_info["ctftime_url"]}">{event_info["ctftime_url"]}</a>' + '\n')
             self.ui.statusBar.clearMessage()
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.event_info_text.clear()
@@ -68,6 +66,8 @@ class Ctftime(QMainWindow):
         result = (points_k + place_k) * weight / 1 / 1 + (team_place / total_teams)
         best_rating = (1 + 1) * weight / 1 / 1 + (1 / total_teams)
         self.ui.rating_spinbox.setValue(result)
+        self.ui.rating_progress.setMaximum(best_rating)
+
         return best_rating
 
     def rating_spinbox_to_progressbar(self):
