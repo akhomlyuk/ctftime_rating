@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designqRaksR.ui'
+## Form generated from reading UI file 'designmotFlp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -26,16 +26,18 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(929, 683)
+        MainWindow.resize(929, 732)
         icon = QIcon()
-        icon.addFile(u":/icons/res/bucket.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/res/rht.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"")
-        MainWindow.setIconSize(QSize(32, 32))
+        MainWindow.setIconSize(QSize(48, 48))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_5 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_5.setSpacing(6)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(-1, 5, -1, 0)
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.settings_box = QGroupBox(self.centralwidget)
@@ -220,6 +222,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_5.addLayout(self.horizontalLayout)
 
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(-1, 0, -1, 0)
         self.event_info_text = QTextBrowser(self.centralwidget)
         self.event_info_text.setObjectName(u"event_info_text")
         self.event_info_text.setFont(font1)
@@ -228,7 +233,52 @@ class Ui_MainWindow(object):
         self.event_info_text.setOpenExternalLinks(True)
         self.event_info_text.setOpenLinks(True)
 
-        self.verticalLayout_5.addWidget(self.event_info_text)
+        self.horizontalLayout_2.addWidget(self.event_info_text)
+
+        self.rht_info = QTextBrowser(self.centralwidget)
+        self.rht_info.setObjectName(u"rht_info")
+        self.rht_info.setFont(font1)
+        self.rht_info.setOpenExternalLinks(True)
+
+        self.horizontalLayout_2.addWidget(self.rht_info)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_2)
+
+        self.verticalLayout_2 = QVBoxLayout()
+        self.verticalLayout_2.setSpacing(6)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(-1, 0, -1, 0)
+        self.author_label = QLabel(self.centralwidget)
+        self.author_label.setObjectName(u"author_label")
+        self.author_label.setMinimumSize(QSize(0, 0))
+        font2 = QFont()
+        font2.setFamilies([u"Ubuntu Medium"])
+        font2.setPointSize(11)
+        font2.setBold(False)
+        self.author_label.setFont(font2)
+        self.author_label.setFrameShape(QFrame.NoFrame)
+        self.author_label.setTextFormat(Qt.MarkdownText)
+        self.author_label.setScaledContents(False)
+        self.author_label.setMargin(0)
+        self.author_label.setIndent(0)
+        self.author_label.setOpenExternalLinks(True)
+
+        self.verticalLayout_2.addWidget(self.author_label)
+
+        self.rht_label = QLabel(self.centralwidget)
+        self.rht_label.setObjectName(u"rht_label")
+        font3 = QFont()
+        font3.setFamilies([u"Ubuntu Medium"])
+        font3.setPointSize(11)
+        self.rht_label.setFont(font3)
+        self.rht_label.setTextFormat(Qt.MarkdownText)
+        self.rht_label.setOpenExternalLinks(True)
+
+        self.verticalLayout_2.addWidget(self.rht_label)
+
+
+        self.verticalLayout_5.addLayout(self.verticalLayout_2)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusBar = QStatusBar(MainWindow)
@@ -268,5 +318,7 @@ class Ui_MainWindow(object):
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Fira Code Medium'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"><br /></p></body></html>", None))
+        self.author_label.setText(QCoreApplication.translate("MainWindow", u"Author: [Exited3n](https://t.me/exited3n)", None))
+        self.rht_label.setText(QCoreApplication.translate("MainWindow", u"Team: [RedHazzarTeam](https://ctftime.org/team/186788)", None))
     # retranslateUi
 

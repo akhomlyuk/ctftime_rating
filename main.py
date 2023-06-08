@@ -4,7 +4,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow
 
 from design import Ui_MainWindow
-from functions import results_from_ctftime, event_information
+from functions import results_from_ctftime, event_information, rht_info
 
 
 class Ctftime(QMainWindow):
@@ -14,6 +14,7 @@ class Ctftime(QMainWindow):
         self.ui.setupUi(self)
         self.results_to_textedit()
         self.event_info_to_text_edit()
+        self.rht_info_to_text_edit()
         self.rating_formula()
         self.rating_spinbox_to_progressbar()
         # self.ui.rating_progress.setMaximum(self.rating_formula())
@@ -26,6 +27,22 @@ class Ctftime(QMainWindow):
         self.ui.team_place.valueChanged.connect(self.rating_formula)
         self.ui.teams.valueChanged.connect(self.rating_formula)
         self.ui.weight.valueChanged.connect(self.rating_formula)
+
+    def rht_info_to_text_edit(self):
+        self.ui.rht_info.clear()
+        try:
+            rht = rht_info()
+            # rht = json.dumps(rht, indent=4)
+            self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>')
+            self.ui.rht_info.append('')
+            self.ui.rht_info.append(f'Worldwide position: {rht["rating"]["2023"]["rating_place"]}')
+            self.ui.rht_info.append(f'RU position: {rht["rating"]["2023"]["country_place"]}')
+            self.ui.rht_info.append(f'Rating points: {rht["rating"]["2023"]["rating_points"]}')
+            self.ui.rht_info.append(f'ID: {rht["id"]}')
+            self.ui.rht_info.append(f'Aliases: {rht["aliases"]}')
+            self.ui.statusBar.clearMessage()
+        except (KeyError, json.decoder.JSONDecodeError):
+            self.ui.rht_info.clear()
 
     def event_info_to_text_edit(self):
         self.ui.event_info_text.clear()

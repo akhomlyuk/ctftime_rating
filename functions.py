@@ -3,6 +3,19 @@ import json
 
 result_api_url = 'https://ctftime.org/api/v1/results/'
 event_info_api_url = 'https://ctftime.org/api/v1/events/'
+rht_url = 'https://ctftime.org/api/v1/teams/186788/'
+
+
+def rht_info() -> dict:
+    with requests.Session() as s:
+        header = {
+            'Host': 'ctftime.org',
+            'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0',
+            'Connection': 'close'
+        }
+        rht = s.get(rht_url, headers=header)
+        rht = json.loads(rht.text)
+    return rht
 
 
 def results_from_ctftime() -> dict:
