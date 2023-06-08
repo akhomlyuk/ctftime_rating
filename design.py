@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designmotFlp.ui'
+## Form generated from reading UI file 'designwnRZbF.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -86,7 +86,7 @@ class Ui_MainWindow(object):
         self.weight.setButtonSymbols(QAbstractSpinBox.UpDownArrows)
         self.weight.setProperty("showGroupSeparator", True)
         self.weight.setDecimals(3)
-        self.weight.setMaximum(199.990000000000009)
+        self.weight.setMaximum(99999.990000000005239)
         self.weight.setValue(22.690000000000001)
 
         self.gridLayout.addWidget(self.weight, 4, 1, 1, 1)
@@ -291,7 +291,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Ctftime rating", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"RedHazzarTeam rating", None))
         self.settings_box.setTitle(QCoreApplication.translate("MainWindow", u"Parametres", None))
         self.label.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Best team pts:", None))

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Ctftime rating</string>
+   <string>RedHazzarTeam rating</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
@@ -151,7 +151,7 @@
               <number>3</number>
              </property>
              <property name="maximum">
-              <double>199.990000000000009</double>
+              <double>99999.990000000005239</double>
              </property>
              <property name="value">
               <double>22.690000000000001</double>
