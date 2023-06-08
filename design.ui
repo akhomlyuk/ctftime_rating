@@ -77,7 +77,7 @@
            <property name="maximumSize">
             <size>
              <width>393</width>
-             <height>79</height>
+             <height>136</height>
             </size>
            </property>
            <property name="layoutDirection">
@@ -90,7 +90,7 @@
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="resources.qrc">:/icons/res/ctftime_logo.svg</pixmap>
+            <pixmap resource="resources.qrc">:/icons/res/formula.gif</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>

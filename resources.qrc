@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>res/formula.gif</file>
     <file>res/rht.png</file>
     <file>res/bucket.png</file>
     <file>res/ctftime_logo.svg</file>

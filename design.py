@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designwnRZbF.ui'
+## Form generated from reading UI file 'designcbLDsN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -55,10 +55,10 @@ class Ui_MainWindow(object):
         self.label = QLabel(self.settings_box)
         self.label.setObjectName(u"label")
         self.label.setMinimumSize(QSize(0, 0))
-        self.label.setMaximumSize(QSize(393, 79))
+        self.label.setMaximumSize(QSize(393, 136))
         self.label.setLayoutDirection(Qt.LeftToRight)
         self.label.setAutoFillBackground(False)
-        self.label.setPixmap(QPixmap(u":/icons/res/ctftime_logo.svg"))
+        self.label.setPixmap(QPixmap(u":/icons/res/formula.gif"))
         self.label.setScaledContents(True)
         self.label.setAlignment(Qt.AlignCenter)
         self.label.setWordWrap(False)
