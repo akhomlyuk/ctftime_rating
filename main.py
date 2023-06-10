@@ -4,7 +4,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow
 
 from design import Ui_MainWindow
-from functions import results_from_ctftime, event_information, rht_info
+from functions import results_from_ctftime, event_information, rht_info, rht_best_res
 
 
 class Ctftime(QMainWindow):
@@ -32,6 +32,7 @@ class Ctftime(QMainWindow):
         self.ui.rht_info.clear()
         try:
             rht = rht_info()
+            rht_best = rht_best_res()
             # rht = json.dumps(rht, indent=4)
             self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>')
             self.ui.rht_info.append('')
@@ -40,6 +41,11 @@ class Ctftime(QMainWindow):
             self.ui.rht_info.append(f'Rating points: {rht["rating"]["2023"]["rating_points"]}')
             self.ui.rht_info.append(f'ID: {rht["id"]}')
             self.ui.rht_info.append(f'Aliases: {rht["aliases"]}')
+            self.ui.rht_info.append(f'Best 9 results: {rht_best[1]} + CODEBY org(45.66)\n')
+            # self.ui.rht_info.append(f'{rht_best[0][0].keys()}')
+            for i in rht_best_res()[0]:
+                for j in i:
+                    self.ui.rht_info.append(f'{j} Place: {i[j].get("Place")} Rate: {i[j].get("Rating")}')
             self.ui.statusBar.clearMessage()
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.rht_info.clear()
@@ -84,7 +90,6 @@ class Ctftime(QMainWindow):
         best_rating = (1 + 1) * weight / 1 / 1 + (1 / total_teams)
         self.ui.rating_spinbox.setValue(result)
         self.ui.rating_progress.setMaximum(best_rating)
-
         return best_rating
 
     def rating_spinbox_to_progressbar(self):
