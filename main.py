@@ -17,7 +17,6 @@ class Ctftime(QMainWindow):
         self.rht_info_to_text_edit()
         self.rating_formula()
         self.rating_spinbox_to_progressbar()
-        # self.ui.rating_progress.setMaximum(self.rating_formula())
         self.ui.rating_progress.setValue(self.ui.rating_spinbox.value())
         self.ui.best_team_points.valueChanged.connect(self.rating_formula)
         self.ui.event_id.editingFinished.connect(self.event_info_to_text_edit)
@@ -33,19 +32,24 @@ class Ctftime(QMainWindow):
         try:
             rht = rht_info()
             rht_best = rht_best_res()
-            # rht = json.dumps(rht, indent=4)
-            self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>')
+            self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>\n')
             self.ui.rht_info.append('')
-            self.ui.rht_info.append(f'Worldwide position: {rht["rating"]["2023"]["rating_place"]}')
-            self.ui.rht_info.append(f'RU position: {rht["rating"]["2023"]["country_place"]}')
+            self.ui.rht_info.append(f'🌍 Worldwide position: {rht["rating"]["2023"]["rating_place"]}')
+            self.ui.rht_info.append(f'📍 RU position: {rht["rating"]["2023"]["country_place"]}')
             self.ui.rht_info.append(f'Rating points: {rht["rating"]["2023"]["rating_points"]}')
             self.ui.rht_info.append(f'ID: {rht["id"]}')
             self.ui.rht_info.append(f'Aliases: {rht["aliases"]}')
-            self.ui.rht_info.append(f'Best 9 results: {rht_best[1]} + CODEBY org(45.66)\n')
-            # self.ui.rht_info.append(f'{rht_best[0][0].keys()}')
+            self.ui.rht_info.append(f'Best 9 results: {rht_best[1]} + CODEBY org(45.82)\n')
             for i in rht_best_res()[0]:
                 for j in i:
-                    self.ui.rht_info.append(f'{j} Place: {i[j].get("Place")} Rate: {i[j].get("Rating")}')
+                    if i[j].get("Place") == 3:
+                        self.ui.rht_info.append(f'🥉 {j} Rate: {i[j].get("Rating")}')
+                    elif i[j].get("Place") == 1:
+                        self.ui.rht_info.append(f'🥇 {j} Rate: {i[j].get("Rating")}')
+                    elif i[j].get("Place") == 2:
+                        self.ui.rht_info.append(f'🥈 {j} Rate: {i[j].get("Rating")}')
+                    else:
+                        self.ui.rht_info.append(f'{i[j].get("Place")} {j} Rate: {i[j].get("Rating")}')
             self.ui.statusBar.clearMessage()
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.rht_info.clear()
@@ -100,5 +104,4 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Ctftime()
     window.show()
-
     sys.exit(app.exec())

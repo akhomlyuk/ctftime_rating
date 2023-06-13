@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designyDHFFq.ui'
+## Form generated from reading UI file 'designRFCLer.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1014, 798)
+        MainWindow.resize(1014, 858)
         icon = QIcon()
         icon.addFile(u":/icons/res/rht.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -87,7 +87,7 @@ class Ui_MainWindow(object):
         self.weight.setProperty("showGroupSeparator", True)
         self.weight.setDecimals(3)
         self.weight.setMaximum(99999.990000000005239)
-        self.weight.setValue(22.690000000000001)
+        self.weight.setValue(15.119999999999999)
 
         self.gridLayout.addWidget(self.weight, 4, 1, 1, 1)
 
@@ -101,7 +101,7 @@ class Ui_MainWindow(object):
         self.teams.setProperty("showGroupSeparator", True)
         self.teams.setMinimum(1)
         self.teams.setMaximum(999999)
-        self.teams.setValue(500)
+        self.teams.setValue(855)
 
         self.gridLayout.addWidget(self.teams, 5, 1, 1, 1)
 
@@ -129,7 +129,7 @@ class Ui_MainWindow(object):
         self.rating_spinbox.setProperty("showGroupSeparator", True)
         self.rating_spinbox.setDecimals(3)
         self.rating_spinbox.setMaximum(1000.000000000000000)
-        self.rating_spinbox.setValue(22.690000000000001)
+        self.rating_spinbox.setValue(15.119999999999999)
 
         self.gridLayout.addWidget(self.rating_spinbox, 6, 1, 1, 1)
 
@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.team_points.setProperty("showGroupSeparator", True)
         self.team_points.setDecimals(3)
         self.team_points.setMaximum(99999.990000000005239)
-        self.team_points.setValue(15927.000000000000000)
+        self.team_points.setValue(12819.000000000000000)
 
         self.gridLayout.addWidget(self.team_points, 2, 1, 1, 1)
 
@@ -158,7 +158,7 @@ class Ui_MainWindow(object):
         self.best_team_points.setProperty("showGroupSeparator", True)
         self.best_team_points.setDecimals(3)
         self.best_team_points.setMaximum(99999.990000000005239)
-        self.best_team_points.setValue(16419.000000000000000)
+        self.best_team_points.setValue(12819.000000000000000)
 
         self.gridLayout.addWidget(self.best_team_points, 1, 1, 1, 1)
 
@@ -174,6 +174,10 @@ class Ui_MainWindow(object):
         self.rating_progress.setObjectName(u"rating_progress")
         self.rating_progress.setMaximum(100)
         self.rating_progress.setValue(50)
+        self.rating_progress.setTextVisible(True)
+        self.rating_progress.setOrientation(Qt.Horizontal)
+        self.rating_progress.setInvertedAppearance(False)
+        self.rating_progress.setTextDirection(QProgressBar.TopToBottom)
 
         self.verticalLayout.addWidget(self.rating_progress)
 
@@ -195,7 +199,7 @@ class Ui_MainWindow(object):
         self.event_id.setProperty("showGroupSeparator", False)
         self.event_id.setMinimum(1)
         self.event_id.setMaximum(999999)
-        self.event_id.setValue(1892)
+        self.event_id.setValue(1895)
 
         self.verticalLayout_4.addWidget(self.event_id)
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1014</width>
-    <height>798</height>
+    <height>858</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -154,7 +154,7 @@
               <double>99999.990000000005239</double>
              </property>
              <property name="value">
-              <double>22.690000000000001</double>
+              <double>15.119999999999999</double>
              </property>
             </widget>
            </item>
@@ -177,7 +177,7 @@
               <number>999999</number>
              </property>
              <property name="value">
-              <number>500</number>
+              <number>855</number>
              </property>
             </widget>
            </item>
@@ -237,7 +237,7 @@
               <double>1000.000000000000000</double>
              </property>
              <property name="value">
-              <double>22.690000000000001</double>
+              <double>15.119999999999999</double>
              </property>
             </widget>
            </item>
@@ -260,7 +260,7 @@
               <double>99999.990000000005239</double>
              </property>
              <property name="value">
-              <double>15927.000000000000000</double>
+              <double>12819.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -289,7 +289,7 @@
               <double>99999.990000000005239</double>
              </property>
              <property name="value">
-              <double>16419.000000000000000</double>
+              <double>12819.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -309,6 +309,18 @@
            </property>
            <property name="value">
             <number>50</number>
+           </property>
+           <property name="textVisible">
+            <bool>true</bool>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+           <property name="textDirection">
+            <enum>QProgressBar::TopToBottom</enum>
            </property>
           </widget>
          </item>
@@ -353,7 +365,7 @@
               <number>999999</number>
              </property>
              <property name="value">
-              <number>1892</number>
+              <number>1895</number>
              </property>
             </widget>
            </item>
