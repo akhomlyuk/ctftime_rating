@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designRFCLer.ui'
+## Form generated from reading UI file 'designanErvh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1014, 858)
+        MainWindow.resize(1014, 855)
         icon = QIcon()
         icon.addFile(u":/icons/res/rht.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -55,10 +55,10 @@ class Ui_MainWindow(object):
         self.label = QLabel(self.settings_box)
         self.label.setObjectName(u"label")
         self.label.setMinimumSize(QSize(0, 0))
-        self.label.setMaximumSize(QSize(393, 136))
+        self.label.setMaximumSize(QSize(300, 168))
         self.label.setLayoutDirection(Qt.LeftToRight)
         self.label.setAutoFillBackground(False)
-        self.label.setPixmap(QPixmap(u":/icons/res/formula.gif"))
+        self.label.setPixmap(QPixmap(u":/icons/res/ctf2.png"))
         self.label.setScaledContents(True)
         self.label.setAlignment(Qt.AlignCenter)
         self.label.setWordWrap(False)

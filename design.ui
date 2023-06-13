@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1014</width>
-    <height>858</height>
+    <height>855</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,8 +76,8 @@
            </property>
            <property name="maximumSize">
             <size>
-             <width>393</width>
-             <height>136</height>
+             <width>300</width>
+             <height>168</height>
             </size>
            </property>
            <property name="layoutDirection">
@@ -90,7 +90,7 @@
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="resources.qrc">:/icons/res/formula.gif</pixmap>
+            <pixmap resource="resources.qrc">:/icons/res/ctf2.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>

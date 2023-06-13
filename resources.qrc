@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>res/ctf2.png</file>
     <file>res/formula.gif</file>
     <file>res/rht.png</file>
     <file>res/bucket.png</file>
