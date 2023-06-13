@@ -41,13 +41,13 @@ class Ctftime(QMainWindow):
             for i in rht_best_res()[0]:
                 for j in i:
                     if i[j].get("Place") == 3:
-                        self.ui.rht_info.append(f'🥉 {j} Rate: {i[j].get("Rating")}')
-                    elif i[j].get("Place") == 1:
-                        self.ui.rht_info.append(f'🥇 {j} Rate: {i[j].get("Rating")}')
+                        self.ui.rht_info.append(f'🥉 {j} * {i[j].get("Rating")}')
                     elif i[j].get("Place") == 2:
-                        self.ui.rht_info.append(f'🥈 {j} Rate: {i[j].get("Rating")}')
+                        self.ui.rht_info.append(f'🥈 {j} * {i[j].get("Rating")}')
+                    elif i[j].get("Place") == 1:
+                        self.ui.rht_info.append(f'🥇 {j} * {i[j].get("Rating")}')
                     else:
-                        self.ui.rht_info.append(f'{i[j].get("Place")} {j} Rate: {i[j].get("Rating")}')
+                        self.ui.rht_info.append(f'{i[j].get("Place")} {j} * {i[j].get("Rating")}')
             self.ui.statusBar.clearMessage()
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.rht_info.clear()
