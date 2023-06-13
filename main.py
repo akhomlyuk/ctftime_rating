@@ -1,8 +1,6 @@
 import json
 import sys
-
 from PySide6.QtWidgets import QApplication, QMainWindow
-
 from design import Ui_MainWindow
 from functions import results_from_ctftime, event_information, rht_info, rht_best_res
 
@@ -32,7 +30,7 @@ class Ctftime(QMainWindow):
         try:
             rht = rht_info()
             rht_best = rht_best_res()
-            self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>\n')
+            self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>')
             self.ui.rht_info.append('')
             self.ui.rht_info.append(f'🌍 Worldwide position: {rht["rating"]["2023"]["rating_place"]}')
             self.ui.rht_info.append(f'📍 RU position: {rht["rating"]["2023"]["country_place"]}')
