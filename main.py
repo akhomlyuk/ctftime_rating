@@ -30,15 +30,14 @@ class Ctftime(QMainWindow):
         try:
             rht = rht_info()
             rht_best = rht_best_res()
-            self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>')
-            self.ui.rht_info.append('')
+            # self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>')
             self.ui.rht_info.append(f'🌍 Worldwide position: {rht["rating"]["2023"]["rating_place"]}')
-            self.ui.rht_info.append(f'📍 RU position: {rht["rating"]["2023"]["country_place"]}')
-            self.ui.rht_info.append(f'Rating points: {rht["rating"]["2023"]["rating_points"]}')
-            self.ui.rht_info.append(f'ID: {rht["id"]}')
-            self.ui.rht_info.append(f'Aliases: {rht["aliases"]}')
-            self.ui.rht_info.append(f'Best 9 results: {rht_best[1]} + CODEBY org(45.82)\n')
-            for i in rht_best_res()[0]:
+            self.ui.rht_info.append(f'📈 RU position: {rht["rating"]["2023"]["country_place"]}')
+            self.ui.rht_info.append(f'🎯 Rating points: {rht["rating"]["2023"]["rating_points"]}\n')
+            # self.ui.rht_info.append(f'ID: {rht["id"]}')
+            # self.ui.rht_info.append(f'Aliases: {rht["aliases"]}')
+            self.ui.rht_info.append(f'Best 9 results: {rht_best[1]} + CODEBY org(45.82)')
+            for i in rht_best[0]:
                 for j in i:
                     if i[j].get("Place") == 3:
                         self.ui.rht_info.append(f'🥉 {j} * {i[j].get("Rating")}')
@@ -85,7 +84,6 @@ class Ctftime(QMainWindow):
         team_place = self.ui.team_place.value()
         weight = self.ui.weight.value()
         total_teams = self.ui.teams.value()
-        rh_team_id = 186788
         place_k = 1 / team_place
         points_k = team_points / best_points
         result = (points_k + place_k) * weight / 1 / 1 + (team_place / total_teams)
