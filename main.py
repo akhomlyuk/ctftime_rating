@@ -47,7 +47,6 @@ class Ctftime(QMainWindow):
                         self.ui.rht_info.append(f'🥇 {j} * {i[j].get("Rating")}')
                     else:
                         self.ui.rht_info.append(f'{i[j].get("Place")} {j} * {i[j].get("Rating")}')
-            self.ui.statusBar.clearMessage()
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.rht_info.clear()
 
@@ -61,9 +60,7 @@ class Ctftime(QMainWindow):
             self.ui.event_info_text.append(f'Site: <a href="{event_info["url"]}">{event_info["url"]}</a>')
             self.ui.event_info_text.append(f'Weight: {event_info["weight"]}' + '\n')
             self.ui.event_info_text.append(event_info['description'] + '\n')
-            self.ui.event_info_text.append(
-                f'Ctftime: <a href="{event_info["ctftime_url"]}">{event_info["ctftime_url"]}</a>' + '\n')
-            self.ui.statusBar.clearMessage()
+            self.ui.event_info_text.append(f'Ctftime: <a href="{event_info["ctftime_url"]}">{event_info["ctftime_url"]}</a>' + '\n')
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.event_info_text.clear()
             self.ui.event_info_text.setText('Information not available')
@@ -73,7 +70,6 @@ class Ctftime(QMainWindow):
             result = results_from_ctftime()[str(self.ui.event_id.value())]
             result = json.dumps(result, indent=4)
             self.ui.text_result.setText(result)
-            self.ui.statusBar.clearMessage()
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.text_result.clear()
             self.ui.text_result.setText('Results are not ready')

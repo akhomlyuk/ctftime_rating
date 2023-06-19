@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1014</width>
-    <height>855</height>
+    <width>973</width>
+    <height>838</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,10 +32,10 @@
      <number>6</number>
     </property>
     <property name="topMargin">
-     <number>5</number>
+     <number>2</number>
     </property>
     <property name="bottomMargin">
-     <number>0</number>
+     <number>2</number>
     </property>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -427,6 +427,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
           <pointsize>10</pointsize>
          </font>
         </property>
+        <property name="cursor" stdset="0">
+         <cursorShape>IBeamCursor</cursorShape>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -458,6 +461,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
           <family>Fira Code Medium</family>
           <pointsize>10</pointsize>
          </font>
+        </property>
+        <property name="cursor" stdset="0">
+         <cursorShape>IBeamCursor</cursorShape>
         </property>
         <property name="openExternalLinks">
          <bool>true</bool>
@@ -508,7 +514,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
          <number>0</number>
         </property>
         <property name="indent">
-         <number>0</number>
+         <number>-1</number>
         </property>
         <property name="openExternalLinks">
          <bool>true</bool>
@@ -538,7 +544,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources>
   <include location="resources.qrc"/>

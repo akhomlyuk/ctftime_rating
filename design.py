@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designanErvh.ui'
+## Form generated from reading UI file 'designBGLUbI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -18,15 +18,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QAbstractSpinBox, QApplication, QDoubleSpinBox, QFrame,
     QGridLayout, QGroupBox, QHBoxLayout, QLabel,
     QLayout, QMainWindow, QProgressBar, QSizePolicy,
-    QSpinBox, QStatusBar, QTextBrowser, QTextEdit,
-    QVBoxLayout, QWidget)
+    QSpinBox, QTextBrowser, QTextEdit, QVBoxLayout,
+    QWidget)
 import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1014, 855)
+        MainWindow.resize(973, 838)
         icon = QIcon()
         icon.addFile(u":/icons/res/rht.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_5 = QVBoxLayout(self.centralwidget)
         self.verticalLayout_5.setSpacing(6)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.verticalLayout_5.setContentsMargins(-1, 5, -1, 0)
+        self.verticalLayout_5.setContentsMargins(-1, 2, -1, 2)
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.settings_box = QGroupBox(self.centralwidget)
@@ -232,6 +232,7 @@ class Ui_MainWindow(object):
         self.event_info_text = QTextBrowser(self.centralwidget)
         self.event_info_text.setObjectName(u"event_info_text")
         self.event_info_text.setFont(font1)
+        self.event_info_text.viewport().setProperty("cursor", QCursor(Qt.IBeamCursor))
         self.event_info_text.setReadOnly(True)
         self.event_info_text.setTextInteractionFlags(Qt.TextBrowserInteraction)
         self.event_info_text.setOpenExternalLinks(True)
@@ -242,6 +243,7 @@ class Ui_MainWindow(object):
         self.rht_info = QTextBrowser(self.centralwidget)
         self.rht_info.setObjectName(u"rht_info")
         self.rht_info.setFont(font1)
+        self.rht_info.viewport().setProperty("cursor", QCursor(Qt.IBeamCursor))
         self.rht_info.setOpenExternalLinks(True)
 
         self.horizontalLayout_2.addWidget(self.rht_info)
@@ -265,7 +267,7 @@ class Ui_MainWindow(object):
         self.author_label.setTextFormat(Qt.MarkdownText)
         self.author_label.setScaledContents(False)
         self.author_label.setMargin(0)
-        self.author_label.setIndent(0)
+        self.author_label.setIndent(-1)
         self.author_label.setOpenExternalLinks(True)
 
         self.verticalLayout_2.addWidget(self.author_label)
@@ -285,9 +287,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.addLayout(self.verticalLayout_2)
 
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusBar = QStatusBar(MainWindow)
-        self.statusBar.setObjectName(u"statusBar")
-        MainWindow.setStatusBar(self.statusBar)
 
         self.retranslateUi(MainWindow)
 
