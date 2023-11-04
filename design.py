@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designBGLUbI.ui'
+## Form generated from reading UI file 'designCYsuBR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -142,7 +142,7 @@ class Ui_MainWindow(object):
         self.team_points.setObjectName(u"team_points")
         self.team_points.setProperty("showGroupSeparator", True)
         self.team_points.setDecimals(3)
-        self.team_points.setMaximum(99999.990000000005239)
+        self.team_points.setMaximum(9999999.990000000223517)
         self.team_points.setValue(12819.000000000000000)
 
         self.gridLayout.addWidget(self.team_points, 2, 1, 1, 1)
@@ -157,7 +157,7 @@ class Ui_MainWindow(object):
         self.best_team_points.setMinimumSize(QSize(0, 0))
         self.best_team_points.setProperty("showGroupSeparator", True)
         self.best_team_points.setDecimals(3)
-        self.best_team_points.setMaximum(99999.990000000005239)
+        self.best_team_points.setMaximum(9999999.990000000223517)
         self.best_team_points.setValue(12819.000000000000000)
 
         self.gridLayout.addWidget(self.best_team_points, 1, 1, 1, 1)
