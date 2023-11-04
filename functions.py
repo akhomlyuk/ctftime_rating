@@ -26,7 +26,7 @@ def rht_best_res() -> list:
             place = cols[1].text.strip()
             event = cols[2].text.strip()
             ctf_points = cols[3].text.strip()
-            rating_points = cols[4].text.strip()
+            rating_points = cols[4].text.replace('*', '').strip()
             results.append(
                 {event: {'Place': int(place), 'CTF points': float(ctf_points), 'Rating': float(rating_points)}})
             sorted_data = sorted(results, key=lambda x: x[list(x.keys())[0]]['Rating'], reverse=True)
