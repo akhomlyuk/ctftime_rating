@@ -31,12 +31,13 @@ class Ctftime(QMainWindow):
             rht = rht_info()
             rht_best = rht_best_res()
             # self.ui.rht_info.append('<a href="https://ctftime.org/team/186788">RedHazzarTeam</a>')
-            self.ui.rht_info.append(f'🌍 Worldwide position: {rht["rating"]["2023"]["rating_place"]}')
-            self.ui.rht_info.append(f'📈 RU position: {rht["rating"]["2023"]["country_place"]}')
-            self.ui.rht_info.append(f'🎯 Rating points: {rht["rating"]["2023"]["rating_points"]}\n')
+            self.ui.rht_info.append(f'🌍 Worldwide position: {rht["rating"]["2024"]["rating_place"]}')
+            self.ui.rht_info.append(f'📈 RU position: {rht["rating"]["2024"]["country_place"]}')
+            self.ui.rht_info.append(f'🎯 Rating points: {rht["rating"]["2024"]["rating_points"]}\n')
             # self.ui.rht_info.append(f'ID: {rht["id"]}')
             # self.ui.rht_info.append(f'Aliases: {rht["aliases"]}')
-            self.ui.rht_info.append(f'Best 9 results: {rht_best[1]} + CODEBY org(45.82)')
+            nl = '\n'
+            self.ui.rht_info.append(f'Best 10 results: {nl}')
             for i in rht_best[0]:
                 for j in i:
                     if i[j].get("Place") == 3:
@@ -46,7 +47,7 @@ class Ctftime(QMainWindow):
                     elif i[j].get("Place") == 1:
                         self.ui.rht_info.append(f'🥇 {j} * {i[j].get("Rating")}')
                     else:
-                        self.ui.rht_info.append(f'{i[j].get("Place")} {j} * {i[j].get("Rating")}')
+                        self.ui.rht_info.append(f'▪️ {i[j].get("Place")} {j} * {i[j].get("Rating")}')
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.rht_info.clear()
 

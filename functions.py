@@ -17,7 +17,7 @@ def rht_best_res() -> list:
         }
         response = s.get(rht_results, headers=header)
         soup = BeautifulSoup(response.content, "html.parser")
-        table_div = soup.find("div", {"id": "rating_2023"})
+        table_div = soup.find("div", {"id": "rating_2024"})
         table = table_div.find("table")
         results = []
         total_rating = 0.0
@@ -30,10 +30,10 @@ def rht_best_res() -> list:
             results.append(
                 {event: {'Place': int(place), 'CTF points': float(ctf_points), 'Rating': float(rating_points)}})
             sorted_data = sorted(results, key=lambda x: x[list(x.keys())[0]]['Rating'], reverse=True)
-        for i in sorted_data[:9]:
+        for i in sorted_data[:10]:
             for j in i:
                 total_rating += i[j].get('Rating')
-        return [sorted_data[:9], total_rating]
+        return [sorted_data[:10], total_rating]
 
 
 def rht_info() -> dict:
