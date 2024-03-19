@@ -34,8 +34,8 @@ class Ctftime(QMainWindow):
             self.ui.rht_info.append(f'🌍 Worldwide position: {rht["rating"]["2024"]["rating_place"]}')
             self.ui.rht_info.append(f'📈 RU position: {rht["rating"]["2024"]["country_place"]}')
             self.ui.rht_info.append(f'🎯 Rating points: {rht["rating"]["2024"]["rating_points"]}\n')
-            # self.ui.rht_info.append(f'ID: {rht["id"]}')
-            # self.ui.rht_info.append(f'Aliases: {rht["aliases"]}')
+            self.ui.rht_info.append(f'ID: {rht["id"]}')
+            self.ui.rht_info.append(f'Aliases: {rht["aliases"]}')
             nl = '\n'
             self.ui.rht_info.append(f'Best 10 results: {nl}')
             for i in rht_best[0]:
