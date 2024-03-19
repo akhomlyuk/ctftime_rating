@@ -40,14 +40,15 @@ class Ctftime(QMainWindow):
             self.ui.rht_info.append(f'Best 10 results: {nl}')
             for i in rht_best[0]:
                 for j in i:
+                    place = i[j].get("Place")
                     if i[j].get("Place") == 3:
-                        self.ui.rht_info.append(f'🥉 {j} * {i[j].get("Rating")}')
+                        self.ui.rht_info.append(f'🥉 {j} - <b>{place}</b>')
                     elif i[j].get("Place") == 2:
-                        self.ui.rht_info.append(f'🥈 {j} * {i[j].get("Rating")}')
+                        self.ui.rht_info.append(f'🥈 {j} - <b>{place}</b>')
                     elif i[j].get("Place") == 1:
-                        self.ui.rht_info.append(f'🥇 {j} * {i[j].get("Rating")}')
+                        self.ui.rht_info.append(f'🥇 {j} - <b>{place}</b>')
                     else:
-                        self.ui.rht_info.append(f'▪️ {i[j].get("Place")} {j} * {i[j].get("Rating")}')
+                        self.ui.rht_info.append(f'🪣 {j} - <b>{place}</b>')
         except (KeyError, json.decoder.JSONDecodeError):
             self.ui.rht_info.clear()
 
